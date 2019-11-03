@@ -1,0 +1,156 @@
+/*第二屏*/
+#content > .list >.course .course1 {
+    margin: 50px;
+}
+#content > .list >.course .course2 {
+    margin-left: 50px;
+    width: 400px;
+}
+#content > .list >.course .course3 {
+    position: absolute;
+    right: 50px;
+    top: 70px;
+    width: 480px;
+}
+#content > .list >.course .course3 .item {
+    float: left;
+    width: 120px;
+    height: 132px;
+}
+#content > .list >.course .course3 .line {
+    position: absolute;
+    width: 9px;
+    height: 410px;
+    top: -7px;
+    background: url("../img/plus_row.png");
+}
+#content > .list >.course .course3 .line:nth-of-type(1){
+    left: -5px;
+}
+#content > .list >.course .course3 .line:nth-of-type(2){
+    left: 115px;
+}
+#content > .list >.course .course3 .line:nth-of-type(3){
+    left: 235px;
+}
+#content > .list >.course .course3 .line:nth-of-type(4){
+    left: 355px;
+}
+#content > .list >.course .course3 .line:nth-of-type(5){
+    left: 475px;
+}
+#content > .list >.course .course3 .item {
+    float: left;
+    width: 120px;
+    height: 132px;
+    position: relative;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+#content > .list >.course .course3 .item .face,
+#content > .list >.course .course3 .item .backFace{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: 1.5s transform;
+}
+#content > .list > .course .course3 .item .backFace{background-position: 50% 50%!important;}
+#content > .list > .course .course3 .item:nth-of-type(1) .backFace{background: url(../img/apcoa.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(2) .backFace{background: url(../img/apcoa.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(3) .backFace{background: url(../img/bks.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(4) .backFace{background: url(../img/gu.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(5) .backFace{background: url(../img/hlx.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(6) .backFace{background: url(../img/lbs.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(7) .backFace{background: url(../img/leonberg.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(8) .backFace{background: url(../img/pcwelt.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(9) .backFace{background: url(../img/tata.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(10) .backFace{background: url(../img/bks.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(11) .backFace{background: url(../img/bks.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(12) .backFace{background: url(../img/bks.png) no-repeat;}
+#content > .list > .course .course3 .item .face{transform: rotateY(180deg);backface-visibility: hidden;
+    background: #009ee0;color: white;
+}
+
+#content > .list > .course .course3 .item:hover .face{transform: rotateY(360deg);}
+#content > .list > .course .course3 .item:hover .backFace{transform: rotateY(180deg);}
+
+    /*第三屏*/
+#content > .list >.works  .works1 {
+    margin: 50px 0 100px 50px;
+}
+#content > .list >.works  .works2 {
+    margin-left: 50px;
+}
+#content > .list >.works  .works2 > .item{
+    float: left;
+    width: 220px;
+    height: 133px;
+    margin: 0 1px;
+    position: relative;
+    overflow: hidden;
+}
+#content > .list >.works  .works2 > .item:last-of-type{
+    width: 332px;
+}
+#content > .list >.works  .works2 > .item .mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: 0.5s opacity;
+}
+#content > .list >.works  .works2 > .item .mask .icon {
+    width: 32px;
+    height: 34px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: url("../img/zoomico.png")no-repeat;
+    transition: 0.5s background-position;
+}
+#content > .list >.works  .works2 > .item img {
+    transition: 0.5s transform;
+}
+
+#content > .list >.works  .works2 > .item .mask .icon:hover {
+    background-position: 0 -35px
+}
+#content > .list >.works  .works2 > .item:hover .mask {
+    opacity: .8;
+}
+#content > .list >.works  .works2 > .item:hover img {
+    transform: rotate(30deg) scale(1.5);
+}
+
+#content > .list >.works  .works3 {
+    position: absolute;
+    width: 167px;
+    height: 191px;
+    background: url("../img/robot.png")no-repeat;
+    left: 900px;
+    top: 170px;
+    animation: works3Move 4s linear infinite;
+}
+@keyframes works3Move {
+    0%{
+        transform: translateX(0px) rotateY(0deg);
+    }
+    49%{
+        transform: translateX(-490px) rotateY(0deg);
+    }
+    50%{
+        transform: translateX(-500px) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(0px) rotateY(180deg);
+    }
+}
