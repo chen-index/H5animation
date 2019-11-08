@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>H5项目</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
@@ -13,6 +13,11 @@
 <body>
     <section id="wrap">
 <!--        流体布局-->
+        <div id="mask">
+            <div class="up"></div>
+            <div class="down"></div>
+            <span class="line"></span>
+        </div>
         <header id="head">
 <!--            固定布局-->
             <div class="headMain">
@@ -21,6 +26,9 @@
                         <img src="img/logo.png" alt="">
                     </a>
                 </h1>
+                <div class="music">
+                    <audio src="img/audio.mp3" autoplay loop></audio>
+                </div>
                 <nav class="nav">
                     <ul class="list clearfix">
                         <li>
@@ -56,12 +64,34 @@
                     </ul>
                 </nav>
                 <div class="arrow"></div>
+
             </div>
         </header>
         <section id="content">
             <ul class="list">
                 <li class="home">
-                    <section>home</section>
+                    <section>
+                        <ul class="home1">
+                            <li class="commonTitle active">
+                                <div class="item">one layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">two layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">three layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">four layer</div>
+                            </li>
+                        </ul>
+                        <ul class="home2">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
                 </li>
                 <li class="course">
                     <section>
@@ -131,9 +161,10 @@
                                 <div class="backFace"></div>
                                 <div class="face">有一个大梦想</div>
                             </div>
-
-
                         </div>
+                        <div class="plane1"></div>
+                        <div class="plane2"></div>
+                        <div class="plane3"></div>
                     </section>
                 </li>
                 <li class="works">
@@ -174,14 +205,66 @@
                             </div>
                         </div>
                         <div class="works3"></div>
+                        <div class="pencel1"></div>
+                        <div class="pencel2"></div>
+                        <div class="pencel3"></div>
                     </section>
                 </li>
                 <li class="about">
-                    <section>about</section>
+                    <section>
+                        <header class="about1 commonTitle">
+                            <span>DIE</span> <br>
+                            <span>SPEZIELLE</span> <br>
+                            <span>VIELFALT</span> <br>
+                        </header>
+                        <div class="about2 commonText">
+                            <p>在今天这样美好的日子里，人们更容易感受到希望，但生活总不尽如人意，当你感到孤独的时候，更是你需要满怀希望的时候。不管生活有多糟糕，前途有多迷茫，请向我保证你都会紧握希望，让其长存，我们必须必苦难更强大，我希望你们能与希望融为一体，人们需要希望，即使我们失败了又何妨，仔细看看周围吧，正是这些朋友造就了现在的我们，我知道这听起来像是告别，但我们都会把对方变成自己的一部分继续生活下去，时刻提醒我们自己，我们到底是谁。</p>
+                        </div>
+                        <div class="about3">
+                            <div class="item">
+                                <span></span>
+                                <ul data-src="img/about1.jpg"></ul>
+                            </div>
+                            <div class="item">
+                                <span></span>
+                                <ul data-src="img/about3.jpg"></ul>
+                            </div>
+                        </div>
+                        <div class="about4"></div>
+                    </section>
                 </li>
                 <li class="team">
-                    <section>team</section>
+                    <section>
+                        <header class="team1 commonTitle">
+                            <span>WIR SIND</span>
+                            <span>VOXELAIR</span>
+                        </header>
+                        <div class="team2">
+                            <p class="commonText">我们都认为自己拥有无限的光阴，自然而然的想法，现在我们毕业了，但就像我们短暂的高中生活，生命的可贵之处就是她无法永垂不朽，正因为有限，所以才显得更加珍贵</p>
+                            <p class="commonText">现在的我们深有体会，在这里今天我一直说这个，是为了提醒我们时光易逝，不要把时间浪费在无关紧要的人身上，着眼自身，让你的人生变得有意义，无论如何，为你心中的最重要的事奋斗，即使我们无法永生，至少我们没有辜负我们的生命。</p>
+                        </div>
+                        <div class="team3">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+
+                    </section>
                 </li>
+            </ul>
+            <ul class="dot">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </section>
     </section>

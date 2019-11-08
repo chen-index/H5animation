@@ -1,8 +1,86 @@
+/*第一屏*/
+#content > .list > .home .home1 >li > div {
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}
+#content > .list > .home .home1 {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+#content > .list > .home .home1 >li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+#content > .list > .home .home1 >li.active {
+    visibility: visible;
+}
+/*从左往右*/
+#content > .list > .home .home1 > li.leftHide{visibility: hidden;animation:1s leftHide 1 linear;}
+#content > .list > .home .home1 > li.rightShow{visibility: visible;animation:1s rightShow 1 linear;}
+@keyframes leftHide{
+    0%{visibility: visible;}
+    50%{transform: translateX(-40%) rotateY(30deg) scale(.8);}
+    100%{transform: translateZ(-200px);}
+}
+@keyframes rightShow {
+    0%{visibility: hidden;transform: translateZ(-200px);}
+    50%{transform: translateX(40%) rotateY(-30deg) scale(.8);}
+    100%{}
+}
+/*从右往左*/
+#content > .list > .home .home1 > li.leftShow{visibility: visible;animation:1s leftShow 1 linear;}
+#content > .list > .home .home1 > li.rightHide{visibility: hidden;animation:1s rightHide 1 linear;}
+@keyframes leftShow{
+    0%{visibility: hidden;transform: translateZ(-200px);}
+    50%{transform: translateX(-40%) rotateY(30deg) scale(.8);}
+    100%{}
+}
+@keyframes rightHide {
+    0%{visibility: visible;}
+    50%{transform: translateX(40%) rotateY(-30deg) scale(.8);}
+    100%{transform: translateZ(-200px);}
+}
+#content > .list > .home .home1 > li:nth-child(1){background: #dc6c5f}
+#content > .list > .home .home1 > li:nth-child(2){background: #95dc84}
+#content > .list > .home .home1 > li:nth-child(3){background: #64b9d2}
+#content > .list > .home .home1 > li:nth-child(4){background: #000000}
+
+#content > .list > .home .home2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+#content > .list > .home .home2 >li {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(25,25,25, 0.8);
+    box-shadow: 0 0 4px red;
+    cursor: pointer;
+}
+#content > .list > .home .home2 >li.active {
+    background: white;
+    cursor: default;
+}
 /*第二屏*/
 #content > .list >.course .course1 {
+    position: relative;
+    z-index: 2;
     margin: 50px;
 }
 #content > .list >.course .course2 {
+    position: relative;
+    z-index: 2;
     margin-left: 50px;
     width: 400px;
 }
@@ -11,6 +89,7 @@
     right: 50px;
     top: 70px;
     width: 480px;
+    z-index: 2;
 }
 #content > .list >.course .course3 .item {
     float: left;
@@ -80,9 +159,13 @@
 
     /*第三屏*/
 #content > .list >.works  .works1 {
+    position: relative;
+    z-index: 2;
     margin: 50px 0 100px 50px;
 }
 #content > .list >.works  .works2 {
+    position: relative;
+    z-index: 2;
     margin-left: 50px;
 }
 #content > .list >.works  .works2 > .item{
@@ -132,6 +215,7 @@
 }
 
 #content > .list >.works  .works3 {
+    z-index: 2;
     position: absolute;
     width: 167px;
     height: 191px;
@@ -153,4 +237,148 @@
     100%{
         transform: translateX(0px) rotateY(180deg);
     }
+}
+
+/*第四屏*/
+#content > .list > .about .about1{margin: 50px 0 100px 50px;}
+#content > .list > .about .about2{margin-left: 50px; width: 400px;}
+#content > .list > .about .about4{width: 357px;height: 998px;position: absolute;
+    left:50%;top:-100px;background: url(../img/greenLine.png) no-repeat;}
+#content > .list > .about .about3 > .item{width: 260px;height: 200px;border: 5px solid rgba(255,255,255,0.5);
+    border-radius: 8px;position: absolute;z-index: 2;overflow: hidden;}
+#content > .list > .about .about3 > .item:nth-child(1){left:750px; top:50px}
+#content > .list > .about .about3 > .item:nth-child(2){left:600px; top:290px}
+
+#content > .list > .about .about3 > .item > span,#content > .list > .about .about3 > .item > ul{
+    position: absolute;left: 0;top:0;bottom: 0;right: 0;
+}
+#content > .list > .about .about3 > .item:nth-child(1) > span{background: url(../img/about2.jpg) no-repeat;transform: scale(1.5);
+    transition:1s transform;}
+#content > .list > .about .about3 > .item:nth-child(2) > span{background: url(../img/about4.jpg) no-repeat;transform: scale(1.5);
+    transition:1s transform;}
+#content > .list > .about .about3 > .item:hover span{transform: scale(1);}
+
+#content > .list > .about .about3 > .item > ul > li{float: left;position: relative;overflow: hidden;}
+#content > .list > .about .about3 > .item > ul > li > img{position: absolute;transition: 1s top,1s left;}
+
+/*第四屏 end*/
+/*第五屏*/
+#content > .list > .team  .team1 {
+    width: 400px;
+    margin: 50px;
+    float: left;
+}
+#content > .list > .team .team2 {
+    width: 400px;
+    margin: 50px;
+    float: right;
+}
+#content > .list > .team .team3 {
+    position: absolute;
+    width: 944px;
+    height: 448px;
+    left: 50%;
+    top: 250px;
+    margin-left: -472px;
+}
+#content > .list > .team .team3 ul> li{
+    float: left;
+    width: 118px;
+    height: 100%;
+    background: url("../img/team.png")no-repeat;
+    transition: 1s opacity;
+}
+#content > .list > .team .team3 ul{position: relative;height: 100%;}
+#content > .list > .team .team3 ul>li:nth-child(1){background-position:0,0;}
+#content > .list > .team .team3 ul>li:nth-child(2){background-position:-118px,0;}
+#content > .list > .team .team3 ul>li:nth-child(3){background-position:-236px,0;}
+#content > .list > .team .team3 ul>li:nth-child(4){background-position:-354px,0;}
+#content > .list > .team .team3 ul>li:nth-child(5){background-position:-472px,0;}
+#content > .list > .team .team3 ul>li:nth-child(6){background-position:-590px,0;}
+#content > .list > .team .team3 ul>li:nth-child(7){background-position:-708px,0;}
+#content > .list > .team .team3 ul>li:nth-child(8){background-position:-826px,0;}
+#content > .list > .team canvas{position: absolute;top: 0px;}
+/*小圆点*/
+#content > .dot {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+}
+#content > .dot > li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    margin-top: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#content > .dot > li.active {
+    background: white;
+    cursor: default;
+}
+
+/*出入场*/
+#content > .list > .home .home1,
+#content > .list > .home .home2{
+    transition: 1s transform,1s opacity;
+}
+#content  .course .plane1{ width:359px; height:283px; background:url(../img/plane1.png) no-repeat; position:absolute; left:300px; top:-100px; transition:1s;}
+#content  .course .plane2{ width:309px; height:249px; background:url(../img/plane2.png) no-repeat; position:absolute; left:-100px; top:200px; transition:1s;}
+#content  .course .plane3{ width:230px; height:182px; background:url(../img/plane3.png) no-repeat; position:absolute; left:300px; top:400px; transition:1s;}
+
+#content .works .pencel1{ width:180px; height:97px; background:url(../img/pencel1.png) no-repeat; position:absolute; transition:1s; left:500px; top:0;}
+#content .works .pencel2{ width:268px; height:38px; background:url(../img/pencel2.png) no-repeat; position:absolute; transition:1s; left:300px; top:250px;}
+#content .works .pencel3{ width:441px; height:231px; background:url(../img/pencel3.png) no-repeat; position:absolute; transition:1s; left:650px; top:300px;}
+
+#content > .list > .about .about3 > .item{
+    transition: 1s transform;
+}
+
+#content > .list > .team  .team1,
+#content > .list > .team  .team2{
+    transition: 1s transform;
+}
+
+/*音频*/
+#head > .headMain .music{
+    float: left;
+    width:14px;
+    height:14px;
+    margin: 50px 0 0 5px;
+    background: url(../img/musicon.gif);
+}
+
+/*开机动画*/
+#wrap,#mask{
+    height: 100%;
+}
+#mask{
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+#mask .up{
+    width: 100%;
+    height: 50%;
+    background: deepskyblue;
+    transition: 1s height;
+}
+#mask .down{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: deepskyblue;
+    transition: 1s height;
+}
+#mask .line{
+    position: absolute;
+    height: 4px;
+    width: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -2px;
+    background: white;
+    z-index: 101;
+    transition: 1s width;
 }
